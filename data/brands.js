@@ -1,0 +1,23 @@
+export const partners = [
+  { src: "images/logo/patner logo.png", width: 400, height: 400 },
+  { src: "images/logo/logop1.png", width: 400, height: 400 },
+  { src: "images/logo/logop2.png", width: 400, height: 400 },
+  { src: "images/logo/logop8.png", width: 400, height: 400 },
+  { src: "images/logo/logop4.png", width: 400, height: 400 },
+  { src: "images/logo/logop5.png", width: 400, height: 400 },
+  { src: "images/logo/logop11.jpeg", width: 400, height: 400 },
+  { src: "images/logo/logop13.png", width: 400, height: 400 },
+  { src: "images/logo/logop14.jpg", width: 400, height: 400 },
+  { src: "images/logo/logop16.jpeg", width: 400, height: 400 },
+  { src: "images/logo/logop17.png", width: 400, height: 400 },
+  { src: "images/logo/logop18.png", width: 400, height: 400 },
+  { src: "images/logo/logop20.png", width: 400, height: 400 },
+  { src: "images/logo/logop21.jpg", width: 400, height: 400 },
+  { src: "images/logo/logop22.png", width: 400, height: 400 },
+  { src: "images/logo/logop23.jpeg", width: 400, height: 400 },
+  { src: "images/logo/logop24.png", width: 400, height: 400 },
+  { src: "images/logo/logop25.jpg", width: 400, height: 400 },
+  { src: "images/logo/logop26.jpeg", width: 400, height: 400 },
+  { src: "images/logo/logop27.png", width: 400, height: 400 },
+
+];

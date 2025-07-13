@@ -1,0 +1,119 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Blog {
+  id              Int            @id @default(autoincrement())
+  tags            String[]
+  title           String
+  slug            String?        @unique
+  thumbnail       Media?
+  description     String?
+  metaJSON        Json?
+  contentMarkdown String?
+  categories      BlogCategory[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model Category {
+  id        Int            @id @default(autoincrement())
+  blogs     BlogCategory[]
+  name      String         @unique
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model BlogCategory {
+  id         Int       @id @default(autoincrement())
+  Blog       Blog?     @relation(fields: [blogId], references: [id])
+  blogId     Int?
+  Category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model Project {
+  id            Int          @id @default(autoincrement())
+  images        Media[]      @relation("projectImages")
+  gallery       Media[]      @relation("galleryImages")
+  description   String
+  overview      Json?
+  map           String
+  name          String?
+  address       String?
+  slug          String? @unique 
+  mapDetails    Json?
+  whatsNearby   Json?
+  floorPlans    FloorPlan[]
+  attachment    Attachment[]
+  contactNumber String?
+  contactEmail  String?
+  video         Media?       @relation("projectVideo")
+  amenities     String[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+}
+
+model FloorPlan {
+  id        Int      @id @default(autoincrement())
+  name      String
+  details   Json?
+  media     Media    @relation(fields: [mediaId], references: [id], onDelete: Cascade)
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  mediaId   Int      @unique
+  projectId Int
+}
+
+model Attachment {
+  id        Int      @id @default(autoincrement())
+  name      String
+  type      String
+  media     Media    @relation(fields: [mediaId], references: [id], onDelete: Cascade)
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  mediaId   Int      @unique
+  projectId Int
+}
+
+model Media {
+  id             Int         @id @default(autoincrement())
+  url            String
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  blog           Blog?       @relation(fields: [blogID], references: [id], onDelete: Cascade)
+  blogID         Int?        @unique
+  projectImage   Project?    @relation(name: "projectImages", fields: [projectImageId], references: [id], onDelete: Cascade)
+  projectImageId Int?
+  projectVideo   Project?    @relation(name: "projectVideo", fields: [projectVideoId], references: [id], onDelete: Cascade)
+  projectVideoId Int?        @unique
+  floorPlan      FloorPlan?
+  Attachment     Attachment?
+  galleryImage   Project?    @relation(name: "galleryImages", fields: [galleryImageId], references: [id], onDelete: Cascade)
+  galleryImageId Int?
+}
