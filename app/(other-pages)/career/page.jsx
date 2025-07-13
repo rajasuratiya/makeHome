@@ -71,35 +71,44 @@ export default function CareerPage() {
       <section className="flat-section bg-surface">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10">
+            <div className="col-lg-12">
               <div className="box-title text-center mb-5">
                 <h2 className="mb-4">We Practice a Holistic Growth Approach Competitively</h2>
-                <p className="body-1 text-variant-1 mb-4">
-                  Step into the ecosystem of the competitive environment that nurtures professional growth aspirations with collaboration, and camaraderie moments. Our workplace embraces the synergy to learn, share, ideate, and build long-term and sturdy partnerships.
-                </p>
-                <p className="body-2 text-variant-1">
-                  We have a work culture that respects every voiced perception. Join us to experience mega-growth opportunities and embrace continuous growth.
-                </p>
+                <div className="row justify-content-center">
+                  <div className="col-lg-10">
+                    <p className="body-1 text-variant-1 mb-4">
+                      Step into the ecosystem of the competitive environment that nurtures professional growth aspirations with collaboration, and camaraderie moments. Our workplace embraces the synergy to learn, share, ideate, and build long-term and sturdy partnerships.
+                    </p>
+                    <p className="body-2 text-variant-1">
+                      We have a work culture that respects every voiced perception. Join us to experience mega-growth opportunities and embrace continuous growth.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          
+        </div>
+      </section>
+
+      {/* Career Benefits Section */}
+      <section className="flat-section">
+        <div className="container">
           <div className="row">
-            <div className="col-lg-6 mb-4">
+            <div className="col-lg-4 col-md-6 mb-4">
               <div className="box-benefit bg-white p-4 h-100 shadow-1 radius-30">
                 <div className="icon-box mb-3">
                   <div className="box-icon w-60 round bg-primary-new">
                     <i className="icon icon-partnership text-primary"></i>
                   </div>
                 </div>
-                <h5 className="mb-3">Professional Growth</h5>
+                <h5 className="mb-3">Professional Growth Aspects</h5>
                 <p className="text-variant-1 mb-0">
-                  Experience continuous learning opportunities and career advancement in a supportive environment that values your professional development.
+                  Being a part of Star Estate is an opportunity to work with real estate giant and embrace experience to propel exceptional levels in the career while conquering laurels that reflect your determination and result-oriented work approach.
                 </p>
               </div>
             </div>
             
-            <div className="col-lg-6 mb-4">
+            <div className="col-lg-4 col-md-6 mb-4">
               <div className="box-benefit bg-white p-4 h-100 shadow-1 radius-30">
                 <div className="icon-box mb-3">
                   <div className="box-icon w-60 round bg-primary-new">
@@ -112,12 +121,82 @@ export default function CareerPage() {
                 </p>
               </div>
             </div>
+
+            <div className="col-lg-4 col-md-6 mb-4">
+              <div className="box-benefit bg-white p-4 h-100 shadow-1 radius-30">
+                <div className="icon-box mb-3">
+                  <div className="box-icon w-60 round bg-primary-new">
+                    <i className="icon icon-check-circle text-primary"></i>
+                  </div>
+                </div>
+                <h5 className="mb-3">Equality At Work Place</h5>
+                <p className="text-variant-1 mb-0">
+                  We count on success along with the result-oriented work efforts and applaud stellar performances with tokens of appreciation. At Star Estate, sincere efforts to attain goals are always recognized and appreciation is rendered to boost the confidence of our real estate professionals.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 mb-4">
+              <div className="box-benefit bg-white p-4 h-100 shadow-1 radius-30">
+                <div className="icon-box mb-3">
+                  <div className="box-icon w-60 round bg-primary-new">
+                    <i className="icon icon-heart1 text-primary"></i>
+                  </div>
+                </div>
+                <h5 className="mb-3">Healthy Work Environment</h5>
+                <p className="text-variant-1 mb-0">
+                  We believe in an ideal work-life balance in life thus celebrations are a part of our work culture. At Star Estate work and celebration runs parallel to bring team members together to weave a bond of trust and cherish joyful moments to unburden professionals.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 mb-4">
+              <div className="box-benefit bg-white p-4 h-100 shadow-1 radius-30">
+                <div className="icon-box mb-3">
+                  <div className="box-icon w-60 round bg-primary-new">
+                    <i className="icon icon-star text-primary"></i>
+                  </div>
+                </div>
+                <h5 className="mb-3">Incentives & Perks</h5>
+                <p className="text-variant-1 mb-0">
+                  We count on success along with the result-oriented work efforts and applaud stellar performances with tokens of appreciation. At Star Estate, sincere efforts to attain goals are always recognized and appreciation is rendered to boost the confidence of our real estate professionals.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 mb-4">
+              <div className="box-benefit bg-white p-4 h-100 shadow-1 radius-30">
+                <div className="icon-box mb-3">
+                  <div className="box-icon w-60 round bg-primary-new">
+                    <i className="icon icon-sqft text-primary"></i>
+                  </div>
+                </div>
+                <h5 className="mb-3">Industry Standard Payouts</h5>
+                <p className="text-variant-1 mb-0">
+                  Star Estate values work and is happy to render the best remuneration for distinguished portfolios considering the payout standards of the real estate market. Our healthy work frame is an opportunity to elevate in our career by attaining a much-deserved payout.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-12">
+              <div className="box-benefit bg-white p-4 shadow-1 radius-30">
+                <div className="icon-box mb-3">
+                  <div className="box-icon w-60 round bg-primary-new">
+                    <i className="icon icon-customize text-primary"></i>
+                  </div>
+                </div>
+                <h5 className="mb-3">Cognitive Diversity</h5>
+                <p className="text-variant-1 mb-0">
+                  Star Estate is a network of professionals with distinguished work experience across India. Our distinct workforce with unique ideas, concepts, and work strategies elevates the business to attain the target and reap massive success.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Application Form Section */}
-      <section className="flat-section">
+      <section className="flat-section bg-surface">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
@@ -274,4 +353,4 @@ export default function CareerPage() {
       <Footer1 />
     </>
   );
-}a
+}
